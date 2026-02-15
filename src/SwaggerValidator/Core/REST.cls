@@ -3,10 +3,6 @@ Class SwaggerValidator.Core.REST Extends %CSP.REST
 
 Parameter UseSession As Integer = 1;
 
-/// This method gets called prior to dispatch of the request. Put any common code here
-/// that you want to be executed for EVERY request. If pContinue is set to 0, the
-/// request will NOT be dispatched according to the UrlMap. In this case it's the
-/// responsibility of the user to return a response.
 ClassMethod OnPreDispatch(pUrl As %String, pMethod As %String, ByRef pContinue As %Boolean) As %Status
 {
 	Set tSC = ..ValidateRequest()
